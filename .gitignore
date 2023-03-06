@@ -1,0 +1,15 @@
+/.next/
+/node_modules/
+/public/
+/src/
+.eslintrc.json
+next-env.d.ts
+next.config.js
+package-lock.json
+package.json
+postcss.config.js
+server.js
+tailwind.config.js
+tsconfig.json
+yarn-error.log
+yarn.lock
