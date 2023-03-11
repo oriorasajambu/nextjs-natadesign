@@ -3,7 +3,6 @@ const dev = process.env.NODE_ENV !== 'production';
 
 const nextConfig = {
   reactStrictMode: true,
-  trailingSlash: true,
   productionBrowserSourceMaps: true,
   distDir: '_next',
   env: {
