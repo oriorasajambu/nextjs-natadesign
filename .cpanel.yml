@@ -1,8 +1,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/u1474222/public_html/test
-    - /bin/cp _next $DEPLOYPATH
-    - /bin/cp .htaccess $DEPLOYPATH
-    - /bin/cp .eslintrc.json $DEPLOYPATH
-    - /bin/cp .next.config.js $DEPLOYPATH
-    - /bin/cp server.js $DEPLOYPATH
+    - /bin/cp -R * $DEPLOYPATH
