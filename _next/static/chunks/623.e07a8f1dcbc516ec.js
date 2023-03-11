@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[623],{623:function(t,e,n){n.r(e),n.d(e,{default:function(){return c}});var l=n(5893);function c(t){let{className:e,subTitle:n}=t;return(0,l.jsx)("h2",{className:"".concat(e," font-play-serif font-bold text-4xl lg:text-[80px] md:text-[64px] sm:text-[64px] leading-tight"),children:n})}}}]);
+//# sourceMappingURL=623.e07a8f1dcbc516ec.js.map

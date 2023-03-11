@@ -1,0 +1,46 @@
+import { MetaSeoModel } from '@/model/props';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import useSWR from 'swr';
+import dynamic from 'next/dynamic';
+
+const FullscreenLoading = dynamic(() => import('@/components/common/FullscreenLoading'), { ssr: false });
+const CustomHeadComponent = dynamic(() => import('@/components/common/CustomHeadComponent'));
+const TopBarSection = dynamic(() => import('@/components/TopBarSection'), { ssr: false });
+const ContactSection = dynamic(() => import('@/components/ContactSection'));
+const FooterSection = dynamic(() => import('@/components/FooterSection'), { ssr: false });
+const MenuSection = dynamic(() => import('@/components/MenuSection'), { ssr: false });
+const ContentSection = dynamic(() => import('@/components/media/ContentSection'));
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
+export default function MediaPage() {
+    const [showModal, setShowModal] = useState(false);
+    const { query: { slug } } = useRouter();
+    const { data, isLoading, error } = useSWR<MetaSeoModel>(`${process.env.BASE_URL + 'api/seo/' + slug}`, fetcher);
+    if (isLoading) return <FullscreenLoading />
+    if (error) return <></>
+    if (!data) return <></>
+
+    function dismissModal() {
+        setShowModal(false);
+    }
+
+    function revealModal() {
+        setShowModal(!showModal);
+    }
+
+    return (
+        <div className="flex flex-col justify-start">
+            <CustomHeadComponent props={data} />
+            {showModal ? <MenuSection props={{ dismissModal }} /> : null}
+            <div className="w-full flex flex-row justify-center bg-primary">
+                <div className='lg:w-[1200px] md:w-[864px] sm:w-[608px] xs:w-[280px] flex flex-col justify-between'>
+                    <TopBarSection props={{ backgroundColor: 'bg-primary', revealModal }} />
+                </div>
+            </div>
+            <ContentSection />
+            <ContactSection />
+            <FooterSection />
+        </div>
+    )
+}

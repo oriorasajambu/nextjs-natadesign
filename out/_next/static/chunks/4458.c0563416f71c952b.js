@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[4458],{4458:function(t,n,e){e.r(n),e.d(n,{default:function(){return s}});var l=e(5893);function s(t){let{className:n,children:e}=t;return(0,l.jsx)("div",{className:"".concat(n," font-dm-sans font-normal text-sm lg:text-2xl md:text-xl sm:text-xl leading-8"),children:e})}}}]);
-//# sourceMappingURL=4458.c0563416f71c952b.js.map

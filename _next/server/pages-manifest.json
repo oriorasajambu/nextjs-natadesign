@@ -1,0 +1,16 @@
+{
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/about": "pages/about.html",
+  "/articles": "pages/articles.html",
+  "/contact": "pages/contact.html",
+  "/": "pages/index.html",
+  "/information": "pages/information.html",
+  "/media/[slug]": "pages/media/[slug].html",
+  "/media": "pages/media.html",
+  "/portofolio/[slug]": "pages/portofolio/[slug].html",
+  "/portofolio": "pages/portofolio.html",
+  "/_error": "pages/_error.js",
+  "/articles/[slug]": "pages/articles/[slug].js",
+  "/404": "pages/404.html"
+}

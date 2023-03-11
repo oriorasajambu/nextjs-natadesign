@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[2894,2479],{862:function(e,t){t.Z={src:"/_next/static/media/favicon.f44e3afe.svg",height:67,width:67}},2479:function(e,t,n){n.r(t),n.d(t,{default:function(){return a}});var c=n(5893),i=n(862),r=n(5675),s=n.n(r);function a(){return(0,c.jsx)("div",{className:"h-screen w-screen bg-primary flex flex-col justify-center content-center items-center",children:(0,c.jsx)(s(),{src:i.Z.src,width:67,height:67,alt:"Nat.A Design Logo",priority:!0})})}}}]);
-//# sourceMappingURL=2894.847af8de7944599c.js.map
